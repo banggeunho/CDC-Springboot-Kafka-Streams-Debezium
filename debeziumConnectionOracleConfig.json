@@ -1,0 +1,17 @@
+
+{
+    "name": "oracle-connector",
+    "config": {
+        "connector.class" : "io.debezium.connector.oracle.OracleConnector",
+        "database.hostname" : "210.109.60.233",
+        "database.port" : "1521",
+        "database.user" : "logminer",
+        "database.password" : "logminer",
+        "database.dbname" : "XE",
+        "database.server.name" : "dbserver2",
+        "tasks.max" : "1",
+        "table.include.list" : "LOGMINER.TB_SRC",
+        "database.history.kafka.bootstrap.servers" : "kafka:29092",
+        "database.history.kafka.topic": "schema-changes.inventory"
+    }
+}
