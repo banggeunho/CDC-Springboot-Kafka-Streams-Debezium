@@ -91,7 +91,8 @@ services:
 - Source Connector : debezium
 - Sink Connector : Spring boot (jdbc, ojdbc)
 
-![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%201.png)
+
+![Untitled 1](https://user-images.githubusercontent.com/72342550/197522848-9b8694fa-d7b5-4d0e-ae1f-2663f68b65d3.png)
 
 ### Source Connector 생성
 
@@ -118,24 +119,28 @@ services:
 
 ### Topic 확인
 
-![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/72342550/197522880-9ec8476b-a3a7-4389-bd1d-c72c9801fe48.png)
+
 
 ### DB 구성
 
 - Mysql : src_db, target_db 2개로 나누고 각각의 테이블 구성
     
-    ![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%203.png)
-    
+
+    ![Untitled 3](https://user-images.githubusercontent.com/72342550/197522898-6fa6b948-d80f-4c38-b95f-fe97e63ce11c.png)
+
 
 - Oracle : TB_TARGET table 구성
     
-    ![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/72342550/197522917-c8f6e634-0656-4a38-af44-c82ac202b00b.png)
+
     
 
 - 모든 테이블은 아래와 같이 구성 (아이디와 이름)
     
-    ![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%205.png)
-    
+
+    ![Untitled 5](https://user-images.githubusercontent.com/72342550/197522932-80853857-2f58-4084-94e5-c5a0c2bfc61e.png)
+
 
 - 테이블 작성 SQL문
     
@@ -210,44 +215,34 @@ services:
 
 - 소스DB에 데이터 입력/삽입
     
-    ![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/72342550/197522982-ec924913-632b-4121-afbc-1b95764c5cc7.png)
+
     
 
 - kafka-console-consumer 확인
     
-    ![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%207.png)
-    
+
+    ![Untitled 7](https://user-images.githubusercontent.com/72342550/197522994-382e62ec-ba2b-4d94-9275-d11f6877fe67.png)
+
 
 - spring-boot console 확인
     
-    ![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/72342550/197523008-5129aef6-cf73-4745-8c4d-78800c1ae635.png)
+
     
 
 - Mysql target db 확인
     
-    ![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%209.png)
-    
+
+    ![Untitled 9](https://user-images.githubusercontent.com/72342550/197523018-aecfea3d-bb19-400d-b96a-d1b75a2611f1.png)
+
 
 - Oracle target db 확인
     
-    ![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%2010.png)
     
+![Untitled 10](https://user-images.githubusercontent.com/72342550/197523039-d2218bfd-01db-4bb6-8a8e-875d18539931.png)
 
-# Problem
-
-### 카카오엔터프라이즈 CDC 파일럿 - 오라클 사용
-
-- Oracle DB를 소스DB로 설정 후 Mapping api 호출 시 Invalid Oracle URL 에러 발생
-    
-    ![스크린샷 2022-10-22 21.04.27.png](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2022-10-22_21.04.27.png)
-    
-    - Metadata와 step 생성 시 oracle에 맞게 id 지정 후 진행
-        
-        ![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%2011.png)
-        
-    
-    - 11G, 12C 버전으로 시도 → 같은 에러 발생
-    
+# Trouble Shooting
 
 ### Spring Boot Project 진행 중 - 오라클 커넥트 생성
 
@@ -275,8 +270,9 @@ services:
     - license 문제로 debezium에서 ojdbc를 제공하지 않음 → 직접 다운받아 libs에 넣어주어야함
 - topic 생성 확인
     
-    ![Untitled](%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A9%E1%84%89%E1%85%A1%20%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A6%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20feed4c5b3a3246958e7aa90906df8d5d/Untitled%2012.png)
-    
+
+    ![Untitled 12](https://user-images.githubusercontent.com/72342550/197523148-42d4d145-7ce4-484f-b4e8-ca25b7608e8c.png)
+
 
 - 초기에는 Consumer가 메세지를 잘 받는 것을 확인, 점점 메세지 받아오는게 느려지더니, debezium connect에서 unregistered 되는 현상 발견…
 - 원인 파악 중입니다..
