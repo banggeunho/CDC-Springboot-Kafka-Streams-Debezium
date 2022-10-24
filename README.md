@@ -1,7 +1,7 @@
 
 # CDC  - Kafka, Debezium, Spring Boot
-
-[https://github.com/banggeunho/CDC-Springboot-Kafka-Debezium](https://github.com/banggeunho/CDC-Springboot-Kafka-Debezium)
+Kafka, Debezium, Spring Boot, MySQL, ORACLE을 사용하여 CDC 환경 구축 (DML)
+REST API를 이용하여 Debezuim Source Connect를 생성하고, Spring boot와 kafka 연동을 통해 Sink Connect 생성..
 
 ### 작업환경
 
@@ -288,10 +288,6 @@ services:
 
 ## 감사합니다. 🥰
 
-201635816 가천대 소프트웨어학과 방근호
-
-PHONE : 010-3767-8836
-
+방근호
 G-MAIL : panggeunho@gmail.com
-
 Github : [https://github.com/banggeunho](https://github.com/banggeunho)
