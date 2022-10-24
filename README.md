@@ -3,6 +3,17 @@
 Kafka, Debezium, Spring Boot, MySQL, ORACLE을 사용하여 CDC 환경 구축 (DML)
 REST API를 이용하여 Debezuim Source Connect를 생성하고, Spring boot와 kafka 연동을 통해 Sink Connect 생성..
 
+### 구조도
+
+- 소스 DB : MySQL
+- 타겟 DB : Oracle, MySQL
+- Source Connector : debezium
+- Sink Connector : Spring boot (jdbc, ojdbc)
+
+
+![Untitled 1](https://user-images.githubusercontent.com/72342550/197522848-9b8694fa-d7b5-4d0e-ae1f-2663f68b65d3.png)
+
+
 ### 작업환경
 
 - MacBook Air(M1, 2020)
@@ -84,15 +95,7 @@ services:
 
  * 추가 설정 및 플러그인 설치 필요 없음.
 
-### 구조도
 
-- 소스 DB : MySQL
-- 타겟 DB : Oracle, MySQL
-- Source Connector : debezium
-- Sink Connector : Spring boot (jdbc, ojdbc)
-
-
-![Untitled 1](https://user-images.githubusercontent.com/72342550/197522848-9b8694fa-d7b5-4d0e-ae1f-2663f68b65d3.png)
 
 ### Source Connector 생성
 
