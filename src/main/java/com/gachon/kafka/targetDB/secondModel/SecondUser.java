@@ -24,8 +24,16 @@ public class SecondUser {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "sn")
+    private long sn;
+
+    @Column(name="gender")
+    private String gender;
+
     @Builder
-    public SecondUser(String name){
+    public SecondUser(String name, long sn, String gender){
         this.name = name;
+        this.sn =sn;
+        this.gender = gender;
     }
 }

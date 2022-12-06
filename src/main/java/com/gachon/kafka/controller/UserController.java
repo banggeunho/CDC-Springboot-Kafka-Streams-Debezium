@@ -1,5 +1,6 @@
 package com.gachon.kafka.controller;
 
+import com.gachon.kafka.Dto.UserDto;
 import com.gachon.kafka.srcDB.model.User;
 import com.gachon.kafka.srcDB.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -22,8 +23,14 @@ public class UserController {
         return userRepository.save(user);
     }
 
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable int id, @RequestBody User userDto) {
+        User user = userRepository.findById(id).orElseThrow(()-> new IllegalArgumentException("해당 id가 업습니다."));
+        user.update(userDto.getName());
+        return userRepository.save(user);}
+
     @DeleteMapping("/{id}")
-    public int saveUser(@PathVariable int id){
+    public int deleteUser(@PathVariable int id){
         userRepository.deleteById(id);
         return id;
     }

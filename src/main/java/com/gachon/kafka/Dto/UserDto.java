@@ -9,6 +9,8 @@ import java.io.Serializable;
  * A DTO for the {@link User} entity
  */
 @Data
-public class UserDto implements Serializable {
+public class UserDto {
     private final String name;
+    private final long sn;
+    private final String gender;
 }

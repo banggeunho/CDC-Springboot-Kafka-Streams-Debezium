@@ -23,4 +23,14 @@ public class User {
     @Column(name="name")
     private String name;
 
+    @Column(name="sn")
+    private long sn;
+
+    @Column(name="gender")
+    private String gender;
+
+
+    public void update(String name){
+        this.name = name;
+    }
 }
